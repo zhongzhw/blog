@@ -1,0 +1,403 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>led · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-accordion/accordion.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-comments-footer/comment.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../../posix/posix.md" />
+    
+    
+    <link rel="prev" href="../driver.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../nuttx.html">
+            
+                <a href="../nuttx.html">
+            
+                    
+                    nuttx
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../config.html">
+            
+                <a href="../config.html">
+            
+                    
+                    config
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../driver.html">
+            
+                <a href="../driver.html">
+            
+                    
+                    driver
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.2.1" data-path="led.html">
+            
+                <a href="led.html">
+            
+                    
+                    led
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../posix/posix.md">
+            
+                <span>
+            
+                    
+                    posix
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >led</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="led&#x6A21;&#x5757;&#x9A71;&#x52A8;">led&#x6A21;&#x5757;&#x9A71;&#x52A8;</h1>
+<p>&#x914D;&#x7F6E;&#x6587;&#x4EF6; <code>CONFIG_ARCH_LEDS=y</code> &#x8868;&#x660E;nsh&#x63A7;&#x5236;led&#xFF0C;&#x7528;&#x6237;&#x4E0D;&#x80FD;&#x64CD;&#x4F5C;</p>
+<p>led&#x6A21;&#x5757;&#x6709;&#x4E24;&#x79CD;&#x9A71;&#x52A8;&#x6A21;&#x5F0F;&#xFF0C;&#x677F;&#x8F7D;&#x51FD;&#x6570;&#x9A71;&#x52A8;&#x65B9;&#x5F0F;&#x53CA;&#x8BBE;&#x5907;&#x6CE8;&#x518C;&#x9A71;&#x52A8;&#x65B9;&#x5F0F;</p>
+<h2 id="&#x677F;&#x8F7D;&#x51FD;&#x6570;&#x9A71;&#x52A8;&#x65B9;&#x5F0F;">&#x677F;&#x8F7D;&#x51FD;&#x6570;&#x9A71;&#x52A8;&#x65B9;&#x5F0F;</h2>
+<h4 id="&#x51FD;&#x6570;&#x5B9A;&#x4E49;">&#x51FD;&#x6570;&#x5B9A;&#x4E49;</h4>
+<p><code>include/nuttx/board.h</code> &#x4E2D;&#x542B;&#x6709;led&#x4F7F;&#x7528;&#x51FD;&#x6570;&#x7533;&#x660E;</p>
+<pre class="language-"><code>/* led&#x521D;&#x59CB;&#x5316; */
+#ifdef CONFIG_ARCH_HAVE_LEDS
+uint32_t board_userled_initialize(void);
+#endif
+
+/* &#x8BBE;&#x7F6E;&#x76F8;&#x5E94;&#x7684;led&#x706F;&#x72B6;&#x6001; */
+#ifdef CONFIG_ARCH_HAVE_LEDS
+void board_userled(int led, bool ledon);
+#endif
+
+/* &#x8BBE;&#x7F6E;&#x6240;&#x6709;&#x7684;led&#x706F;&#x72B6;&#x6001; */
+#ifdef CONFIG_ARCH_HAVE_LEDS
+void board_userled_all(uint32_t ledset);
+#endif
+</code></pre><p>&#x53EF;&#x5728;&#x4E0A;&#x8FF0;&#x5934;&#x6587;&#x4EF6;&#x4E2D;&#x81EA;&#x5B9A;&#x4E49;led&#x64CD;&#x4F5C;&#x51FD;&#x6570;</p>
+<h4 id="&#x51FD;&#x6570;&#x4F53;&#x5B9E;&#x73B0;">&#x51FD;&#x6570;&#x4F53;&#x5B9E;&#x73B0;</h4>
+<p><code>boards/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>arch</span><span class="token punctuation">&gt;</span></span>/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>chip</span><span class="token punctuation">&gt;</span></span>/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>board</span><span class="token punctuation">&gt;</span></span>/src/initapp.c</code>&#x6587;&#x4EF6;&#x4E3A;&#x5BF9;&#x5E94;&#x63A7;&#x5236;&#x677F;&#x7684;&#x542F;&#x52A8;&#x6587;&#x4EF6;&#xFF08;&#x4E0A;&#x7535;&#x540E;&#x4F1A;&#x81EA;&#x52A8;&#x6267;&#x884C;&#x8BE5;&#x6587;&#x4EF6;&#xFF09;
+<code>boards/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>arch</span><span class="token punctuation">&gt;</span></span>/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>chip</span><span class="token punctuation">&gt;</span></span>/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>board</span><span class="token punctuation">&gt;</span></span>/src/userleds.c</code>&#x4E2D;&#x5305;&#x542B;&#x4E0A;&#x8FF0;&#x51FD;&#x6570;&#x7533;&#x660E;&#x7684;&#x5177;&#x4F53;&#x5B9E;&#x73B0;</p>
+<h4 id="&#x4F7F;&#x7528;">&#x4F7F;&#x7528;</h4>
+<p>&#x5728;&#x81EA;&#x5B9A;&#x4E49;app&#x7A0B;&#x5E8F;&#x4E2D;&#x5305;&#x542B;&#x5934;&#x6587;&#x4EF6;</p>
+<pre class="language-"><code>#include &lt;arch/board/board.h&gt;
+</code></pre><p>&#x53EF;&#x4F7F;&#x7528;1&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x51FD;&#x6570;&#x64CD;&#x4F5C;led</p>
+<h2 id="&#x8BBE;&#x5907;&#x6CE8;&#x518C;&#x9A71;&#x52A8;&#x65B9;&#x5F0F;">&#x8BBE;&#x5907;&#x6CE8;&#x518C;&#x9A71;&#x52A8;&#x65B9;&#x5F0F;</h2>
+<p>&#x5728;&#x5F00;&#x53D1;&#x677F;&#x542F;&#x52A8;&#x6587;&#x4EF6; <code>boards/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>arch</span><span class="token punctuation">&gt;</span></span>/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>chip</span><span class="token punctuation">&gt;</span></span>/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>board</span><span class="token punctuation">&gt;</span></span>/src/initapp.c</code> &#x6216; <code>boards/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>arch</span><span class="token punctuation">&gt;</span></span>/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>chip</span><span class="token punctuation">&gt;</span></span>/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>board</span><span class="token punctuation">&gt;</span></span>/src/bringup.c</code> &#x4E2D;&#x6DFB;&#x52A0;&#x8BBE;&#x5907;&#x6CE8;&#x518C;</p>
+<pre class="language-"><code>#ifndef CONFIG_ARCH_LEDS
+  userled_lower_initialize(&quot;/dev/led&quot;);
+#endif
+</code></pre><p>&#x53EF;&#x5728;&#x81EA;&#x5B9A;&#x4E49;app&#x7A0B;&#x5E8F;&#x4E2D;&#x76F4;&#x63A5;&#x4F7F;&#x7528;</p>
+<div id="comment-wrapper" class="comment-wrapper clearfix">        <div class="comment-copyright">        <span class="title">Comments</span>        <span class="content">                Copyright &#xA9; zhongzhw all right reserved, powered by                <a href="https://github.com/aleen42" target="_blank">aleen42</a>            </span>    </div>        <div class="modules"><div class="content-wrapper">    <div class="comment-list comment-wrapper f-dn">        <div class="empty-comments comment-item clearfix">Empty Comments</div>    </div>    <div class="editor-wrapper f-dn">        <div class="editor">        </div><!--        --><div>            <img class="user-avatar" src=".">            <i class="fa fa-sign-out" title="sign out" action="logout"></i>        </div>    </div>    <div class="auth-wrapper f-dn">        <div class="description">            <div class="title">Sign in <a href="https://github.com" target="_blank">GitHub</a></div>            <div class="content">                <p>As the plugin is integrated with a code management system like GitLab or GitHub, you may have to auth                    with your account before leaving comments around this article.</p>                <p>Notice: This plugin has used Cookie to store your token with an expiration.</p>            </div>        </div>        <div class="auth">            <button class="btn auth-btn">authorize</button>        </div>    </div></div></div>    <script type="text/javascript">        SYS_CONST = JSON.parse('{"redirect":"","clientId":"","repo":"zhongzhw/blogs","copyright":"Copyright © zhongzhw","type":"github","host":"https://github.com","token":"","path":"nuttx/driver/led.md"}');    </script></div>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../driver.html" class="navigation navigation-prev " aria-label="Previous page: driver">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../../posix/posix.md" class="navigation navigation-next " aria-label="Next page: posix">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"led","level":"1.2.2.1","depth":3,"next":{"title":"posix","level":"1.3","depth":1,"path":"posix/posix.md","ref":"posix/posix.md","articles":[]},"previous":{"title":"driver","level":"1.2.2","depth":2,"path":"nuttx/driver.md","ref":"nuttx/driver.md","articles":[{"title":"led","level":"1.2.2.1","depth":3,"path":"nuttx/driver/led.md","ref":"nuttx/driver/led.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hide-element","chapter-fold","katex","alerts","emphasize","prism","-highlight","localized-footer","mermaid-gb3","ga","accordion","comments-footer"],"pluginsConfig":{"chapter-fold":{},"prism":{},"emphasize":{},"accordion":{},"search":{},"localized-footer":{"filename":"FOOTER.md","hline":"true"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"mermaid-gb3":{},"comments-footer":{"type":"github","repo":"zhongzhw/blogs","copyright":"Copyright © zhongzhw"},"alerts":{},"ga":{"configuration":"auto","token":"UA-153583635-5"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"nuttx/driver/led.md","mtime":"2021-07-16T13:39:08.596Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-16T13:44:27.617Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-accordion/accordionSelector.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-comments-footer/comment.dist.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+
